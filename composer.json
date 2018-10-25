@@ -1,0 +1,14 @@
+{
+    "name": "test/com",
+    "description": "test",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "maomao",
+            "email": "5622876@qq.com"
+        }
+    ],
+    "require": {
+        "phpseclib/phpseclib": "^2.0"
+    }
+}
