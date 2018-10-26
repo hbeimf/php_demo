@@ -22,12 +22,20 @@ $rsa = new \phpseclib\Crypt\RSA();
 
 $keys = $rsa->createKey();
 print_r($keys);
+
+foreach ($keys as $key => $value) {
+	# code...
+	file_put_contents('./' . $key . '.key', $value);
+}
+
 extract($keys);
 
-$plaintext = 'terrafrost';
+$plaintext = 'hello world !!!';
 
 $rsa->loadKey($privatekey);
 $ciphertext = $rsa->encrypt($plaintext);
+
+// echo $ciphertext . "\n";
 
 $rsa->loadKey($publickey);
 echo $rsa->decrypt($ciphertext);
