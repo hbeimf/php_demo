@@ -1,7 +1,11 @@
 <?php
 include 'vendor/autoload.php';
 
-$data = "hello world!!";
+// $data = "uid|groupid|expiretime";
+$expire_time = time() + 24 * 60 * 60;
+$data = "10009|100|{$expire_time}";
+
+$data = " //私钥解密//私钥解密//私钥解密";
 
 //私匙加密公式解密
 openssl_private_encrypt($data, $encrypted, file_get_contents(__DIR__ . '/../api/config/privatekey.key')); //私钥加密

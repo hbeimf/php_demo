@@ -10,7 +10,10 @@ $aes = new \phpseclib\Crypt\AES();
 
 $aes->setKey("asdfghkl;'][poi?");
 
-$plaintext = 'hello';
+$plaintext = 'Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?';
+
+// $expire_time = time() + 24 * 60 * 60;
+// $plaintext = "10009|100|{$expire_time}";
 
 $base64 = base64_encode($aes->encrypt($plaintext));
 echo "encode: {$base64}\n";

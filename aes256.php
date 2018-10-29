@@ -57,10 +57,12 @@ class AES256 {
 	}
 }
 
+$data = 'Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?';
+
 $password = "asdfghkl;'][poi?";
 
 // encryption
-$encode = base64_encode(AES256::encrypt('TEXT', $password));
+$encode = base64_encode(AES256::encrypt($data, $password));
 
 echo "encode: {$encode}\n";
 
