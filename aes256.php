@@ -57,14 +57,14 @@ class AES256 {
 	}
 }
 
-$data = 'Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?Are you sure you want to set the ratings to expire at a time in the past?';
+$data = 'hello';
 
 $password = "PASSWORD";
 
 // encryption
 $encode = AES256::encrypt($data, $password);
 
-$encode = "U2FsdGVkX18eb3dWtZoLQuAvWAST3qdaCq9EtoVhHPk=";
+// $encode = "U2FsdGVkX18eb3dWtZoLQuAvWAST3qdaCq9EtoVhHPk=";
 
 echo "encode: {$encode}\n";
 
